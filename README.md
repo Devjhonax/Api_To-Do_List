@@ -22,7 +22,7 @@ A API permite:
   Retorna os dados de uma tarefa específica.
 
 - ✏️ **Atualizar uma tarefa**  
-  `PUT /tarefas/:id`  
+  `PUT /tarefa/:id`  
   Atualiza completamente os dados de uma tarefa existente.
 
 - 🔄 **Atualizar status da tarefa**  
