@@ -2,11 +2,18 @@ import express from "express"
 import sequelize from "./config/configDb.js";
 import { logger } from "./middlewares/logger.middlewarer.js";
 import router from "./router/tarefasRouter.js";
+import cors from "cors";
 
 const app = express();
 
 // aplicação que permite usar todas as ferramentas desenvolvidas nas outras pastas.
 app.use(express.json())
+
+app.use(cors({
+  origin: process.env.FRONTEND,
+  credentials: true
+}));
+
 app.use(logger)
 app.use(router)
 
